@@ -9,7 +9,7 @@ const typeDefs = gql`
 		createdAt: String
 		username: String
 		reactionCount: Int
-        reactions: [Reaction]
+		reactions: [Reaction]
 	}
 
 	type Reaction {
@@ -19,14 +19,14 @@ const typeDefs = gql`
 		username: String
 	}
 
-    type User {
-        _id: ID
-        username: String 
-        email: String
-        friendCount: Int
-        thoughts: [Thought]
-        friends: [User]
-    }
+	type User {
+		_id: ID
+		username: String
+		email: String
+		friendCount: Int
+		thoughts: [Thought]
+		friends: [User]
+	}
 
 	type Auth {
 		token: ID!
@@ -35,10 +35,10 @@ const typeDefs = gql`
 
 	type Query {
 		me: User
-        users: [User]
-        user(username: String!): User
+		users: [User]
+		user(username: String!): User
 		thoughts(username: String): [Thought]
-        thought(_id: ID!): Thought
+		thought(_id: ID!): Thought
 	}
 
 	type Mutation {
