@@ -71,8 +71,8 @@ export const QUERY_ME = gql`
 				reactionCount
 				reactions {
 					_id
-					reactionBody
 					createdAt
+					reactionBody
 					username
 				}
 			}
